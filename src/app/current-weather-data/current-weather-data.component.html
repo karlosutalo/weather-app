@@ -6,6 +6,9 @@
       <div style="font-size: 3rem; font-weight: bold;">{{currentWeather.current.temp_c}} °C</div>
       <div>Wind: {{currentWeather.current.wind_kph}} km/h {{currentWeather.current.wind_dir}}</div>
       <div>{{currentWeather.current.condition.text}}</div>
+      <div>Pressure: {{currentWeather.current.pressure_mb}} mBar</div>
+      <div>Rain: {{currentWeather.current.precip_mm}} mm</div>
+      <div>UV: {{currentWeather.current.uv}}</div>
     </div>
 
     <div class="current-icon" style="margin: 1rem">
@@ -16,7 +19,13 @@
 
   <div class="sunrise">
     <div style="font-size: 1.5rem; margin: 1rem">Sunrise & sunset </div>
-    <!-- <div> Real feel: {{currentWeather.current.condition.text}}</div> -->
+    <div>Sunrise: {{astronomy.astro.sunrise}}</div>
+    <div>Sunset: {{astronomy.astro.sunset}}</div>
+    <div>Moonrise: {{astronomy.astro.moonrise}}</div>
+    <div>Moonset: {{astronomy.astro.moonset}}</div>
+    <div>Moon phase: {{astronomy.astro.moon_phase}}</div>
+    <div>Moon illumination: {{astronomy.astro.moon_illumination}}</div>
+
   </div>
 
 
@@ -34,6 +43,11 @@
         </div>
     </div>
 
+    </div>
+
+    <div class="alert-data-container">
+      <div style="font-size: 1.5rem; margin: 1rem">Alerts</div>
+      <div><br>headline:{{alert.alert[0].headline}}</div>
     </div>
 
     <div *ngIf="accessories && accessories.length > 0">

@@ -3,6 +3,11 @@
   display: flex;
   justify-content: center;
 }
+.alert-data-container{
+  display: flex;
+  justify-content: center;
+  background-color:#bb8cb8;
+}
 
 .grid-container {
   display: grid;
